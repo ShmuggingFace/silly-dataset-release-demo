@@ -8,7 +8,6 @@
     "check": "npm run build"
   },
   "dependencies": {
-    "@shmuggingface/core": "github:ShmuggingFace/ShmuggingFaceCore#codex/initial-framework-demo"
-  },
-  "devDependencies": {}
+    "@shmuggingface/core": "github:ShmuggingFace/ShmuggingFaceCore#main"
+  }
 }
