@@ -20,7 +20,13 @@ jobs:
       - run: npm ci
       - run: npm run build
       - uses: cloudflare/wrangler-action@v3
+        if: ${{ secrets.CLOUDFLARE_API_TOKEN != '' && secrets.CLOUDFLARE_ACCOUNT_ID != '' && vars.CLOUDFLARE_PAGES_PROJECT != '' }}
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy dist --project-name ${{ vars.CLOUDFLARE_PAGES_PROJECT }} --branch main
+      - name: Explain skipped deployment
+        if: ${{ secrets.CLOUDFLARE_API_TOKEN == '' || secrets.CLOUDFLARE_ACCOUNT_ID == '' || vars.CLOUDFLARE_PAGES_PROJECT == '' }}
+        run: |
+          echo "Built the ShmuggingFace mock, but skipped Cloudflare deploy because one or more required repo settings are missing."
+          echo "Required: secrets.CLOUDFLARE_API_TOKEN, secrets.CLOUDFLARE_ACCOUNT_ID, vars.CLOUDFLARE_PAGES_PROJECT."
