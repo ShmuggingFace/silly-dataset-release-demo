@@ -17,6 +17,9 @@ The datasets are intentionally invented and harmless:
 Generated pages are branded as ShmuggingFace and Shmaggle mocks and include a
 visible notice that they are not real platform pages or real releases.
 
+Live demo:
+<https://shmuggingface-silly-dataset-demo.pages.dev/>
+
 ## Generate Locally
 
 ```sh
