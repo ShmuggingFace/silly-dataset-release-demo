@@ -1,0 +1,14 @@
+{
+  "name": "silly-dataset-release-demo",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "shmuggingface build --config shmuggingface.config.mjs --out dist",
+    "check": "npm run build"
+  },
+  "dependencies": {
+    "@shmuggingface/core": "github:ShmuggingFace/ShmuggingFaceCore#codex/initial-framework-demo"
+  },
+  "devDependencies": {}
+}
