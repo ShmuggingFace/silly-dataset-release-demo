@@ -8,6 +8,6 @@
     "check": "npm run build"
   },
   "dependencies": {
-    "@shmuggingface/core": "github:ShmuggingFace/ShmuggingFaceCore#v1.0.0"
+    "@shmuggingface/core": "https://github.com/ShmuggingFace/ShmuggingFaceCore/archive/refs/tags/v1.0.2.tar.gz"
   }
 }
